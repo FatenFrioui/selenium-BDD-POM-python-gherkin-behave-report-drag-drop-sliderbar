@@ -21,5 +21,5 @@ def step_impl(context):
 @then(u'he see the message change to Dropped!')
 def step_impl(context):
     msg=context.dd.msg()
-    assert_equal(msg,"Dropped")
+    assert_equal(msg,"Dropped!")
 
