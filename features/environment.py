@@ -2,8 +2,8 @@
 import os
 from os import getcwd
 
-from allure_commons._allure import attach
-from allure_commons.types import AttachmentType
+# from allure_commons._allure import attach
+# from allure_commons.types import AttachmentType
 # from attach import attach
 # from allure_commons.types import AttachmentType
 
@@ -25,11 +25,11 @@ def before_scenario(context,scenario):
 def after_scenario(context, scenario):
     context.browser.close()
 
-def after_step(context, step):
-    if step.status == "failed":
-        context.browser.save_screenshot('c://b/screenshot.png')
-        attach(
-            context.browser.get_screenshot_as_png(),
-            name="Screenshot",
-            attachment_type=AttachmentType.PNG)
+# def after_step(context, step):
+#     if step.status == "failed":
+#         context.browser.save_screenshot('c://b/screenshot.png')
+#         attach(
+#             context.browser.get_screenshot_as_png(),
+#             name="Screenshot",
+#             attachment_type=AttachmentType.PNG)
         # allure.attach(context.browser.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
